@@ -9,8 +9,6 @@ body {
     background-image: url(/images/bg.png);
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    padding-left: 1em;
-    padding-right: 1em;
 }
 
 /* Header y nav */
@@ -20,6 +18,9 @@ body {
     margin-top: .7em;
     box-sizing: border-box;
     z-index: 8;
+    margin-top: .7em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 header {
@@ -69,7 +70,7 @@ nav a:hover {
     color: #323232;
     text-decoration: none;
     text-shadow: 0em 0em 3em black;
-    filter: blur(.3px);
+    filter: blur(.15px);
 
 }
 
@@ -103,12 +104,14 @@ article {
     height: 10em;
     margin: 1em;
     z-index: 1;
+    transform: scale(1.0);
+    transition: transform .2s ease-in-out;
 
 }
 
 article:hover{
-    /*box-shadow: 0em 0em .5em #ffffff;*/
-    transform: scale(1.01);
+    transform: scale(1.02);
+    transition: transform .1s ease-in-out;
 }
 
 article img {
@@ -147,6 +150,12 @@ article i {
     right: 1%;
 }
 
+article i:hover {
+    filter: drop-shadow(1px 1px 1em black);
+    filter: invert(20%);
+    filter: blur(0.2px)
+}
+
 /* fooster */
 
 footer {
@@ -156,23 +165,18 @@ footer {
     bottom: 0%;
     width: 100%;
     height: 3.5em;
-    display: block;
-}
-
-footer h4 {
-    margin-top: 1em;
-}
-
-footer ul {
-    padding-right: 2em;
-    padding-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 footer li {
     list-style-type: none;
-    position: relative;
-    float: right;
+    float: left;
     padding-left: 1em;
+    margin: 1em;
 }
 
 footer img {
@@ -182,5 +186,6 @@ footer img {
 footer img:hover {
     width: 1.5em;
     filter: drop-shadow(1px 1px 1em black);
+    filter: invert(20%);
 
 }
