@@ -82,6 +82,30 @@ nav li {
     padding-left: .5em;
 }
 
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: #f5f5f5;
+    background-image: url(/images/bg.png);
+    padding: 0.7em;
+    border-radius: 10px;
+}
+
+nav ul ul li {
+    float:none;
+}
+
+nav ul ul a {
+    line-height: 150%;
+    padding: 10px 15px;
+}
+
+nav ul li:hover > ul {
+    display:block;
+}
+
 /* main */
 
 main {
