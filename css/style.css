@@ -180,6 +180,43 @@ article i:hover {
     filter: blur(0.2px)
 }
 
+/* section */
+
+section {
+    background-color: white;
+    background-image: url(/images/bg.png);
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    margin: 1.3em;
+    z-index: 1;
+    max-width: 1300px;
+}
+
+section h2 {
+    float: right;
+    position: absolute;
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 2.2em;
+}
+
+section p {
+    padding: 2em;
+    padding-top: 6em;
+    text-align: justify;
+}
+
+section form {
+    padding-top: 6em;
+    padding: 2em;
+    height: 20em;
+    margin: 4em;
+}
+
+section form input {
+}
+
 /* footer */
 
 footer {
