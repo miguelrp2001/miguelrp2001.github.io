@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    border: solid red 0px;
 }
 
 body {
@@ -196,15 +197,26 @@ section {
 section h2 {
     float: right;
     position: absolute;
-    padding-top: 1em;
+    padding-top: 8em;
     padding-left: 1em;
     font-size: 2.2em;
-}
+    z-index: 5;
+  }
 
 section p {
     padding: 2em;
-    padding-top: 6em;
+    padding-top: 2em;
     text-align: justify;
+}
+
+section img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height:22em;
+    padding: 4px;
+    object-fit:cover;
+    filter: blur(5px);
 }
 
 section form {
@@ -212,9 +224,6 @@ section form {
     padding: 2em;
     height: 20em;
     margin: 4em;
-}
-
-section form input {
 }
 
 /* footer */
