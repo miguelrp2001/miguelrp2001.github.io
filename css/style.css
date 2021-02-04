@@ -18,7 +18,7 @@ body {
     top: 11px;
     margin-top: .7em;
     box-sizing: border-box;
-    z-index: 8;
+    z-index: 5;
     margin-top: .7em;
     margin-left: 1em;
     margin-right: 1em;
@@ -48,7 +48,6 @@ header img {
     top: 0%;
     height: 100%;
     float: left;
-    
 }
 
 header img:hover {
@@ -194,19 +193,39 @@ section {
     max-width: 1300px;
 }
 
-section h2 {
+section h2.en_imagen {
     float: right;
     position: absolute;
     padding-top: 8em;
     padding-left: 1em;
     font-size: 2.2em;
     z-index: 5;
+    text-shadow: 1px 1px 0.2em white;
   }
 
-section p {
-    padding: 2em;
-    padding-top: 2em;
+  section h2.no_imagen {
+    float: right;
+    position: absolute;
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 2.2em;
+    z-index: 5;
+
+  }
+
+section > p {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: .5em;
     text-align: justify;
+}
+
+section code {
+    padding-left: 4em;
+    padding-right: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: black;
 }
 
 section img{
@@ -217,6 +236,7 @@ section img{
     padding: 4px;
     object-fit:cover;
     filter: blur(5px);
+    padding-bottom: 1.5em;
 }
 
 section form {
@@ -224,6 +244,26 @@ section form {
     padding: 2em;
     height: 20em;
     margin: 4em;
+}
+
+section a p {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-weight: bolder;
+    letter-spacing: .5em;
+    transform: scale(1);
+    transition: transform 1s ease-in-out;
+}
+section a {
+    color: black;
+    text-decoration: none;
+}
+
+section a p:hover {
+    transform: scale(1.1);
+    letter-spacing: .5em;
+    transition: transform 1s ease-in-out;
 }
 
 /* footer */
@@ -257,5 +297,6 @@ footer img:hover {
     width: 1.5em;
     filter: drop-shadow(1px 1px 1em black);
     filter: invert(20%);
+    filter: blur(.2px);
 
 }
