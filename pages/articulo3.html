@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.code - BASH Sin morir</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" href="../images/dotcode_fav.png" type="image/png" />
+</head>
+
+<body>
+    <div id="fondo_cabecera">
+        <header>
+            <a href="../index.html"><img src="../images/dotcode.png" /></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a>
+                        <ul>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">nodejs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="full" id="arriba">
+            <h2 class="en_imagen">BASH Sin morir</h2>
+            <img src="../images/articulos/art11.png" alt="">
+            <p>
+                El lenguaje interpretado bash es un lenguaje de órdenes y shell de Unix, es utilizado ampliamente por
+                los sistemas operativos basados en el Kernel de Linux.
+            </p>
+            <p>
+                Este lenguaje es usado a parte de por los sistemas basados en el Kernel de Linux, también se usa en Mac
+                OS X aunque también se puede instalar en Windows y en Android.
+            </p>
+            <p>
+                Al ser un lenguaje interpretado no es necesario compilar nada, el interprete va ejecutando en el orden
+                en el que lo lee.
+            </p>
+            <code>
+                <span id="shcomentario">#!/bin/bash</span> <br><br>
+                <span id="shcomentario"># Ejemplo Hola mundo! en Bash</span><br><br>
+                <span id="shcomando">echo</span> <span id="shcomillas">"Hola mundo!"</span>
+                
+            </code>
+            <p>
+                En el ejemplo anterior, podemos ver varias líneas, todas las líneas que empiezan con # son comentarios y
+                por lo general el interprete simplemente los
+                ignora, excepto cuando lleva la exclamación, que es para indicar el interprete a usar (ver 1ª línea).
+                Para mostrar texto por pantalla simplemente tenemos que poner echo y justo después entre comillas dobles
+                o simples el texto a mostrar, el ejemplo de arriba nos mostraría por consola:
+            </p>
+            <code>
+                hola mundo!
+            </code>
+            <p>
+                Evidentemente bash es mucho más potente, podemos declarar variables:
+            </p>
+            <code>
+                variableTexto="Contenido de variable"<br><br>
+                variableNum=1231238172<br><br>
+                variableArray=("Array" "De" "Texto")<br><br>
+                variableArrayN=(1 4 6 3 2)<br><br>
+                variableArrayMezcla=(1 3 5 "Podemos mezclar texto y números en arrays" 9 15 32)
+            </code>
+            <p>Como podemos apreciar, en este lenguaje podemos incluso mezclar tipos de datos en los array, algo que no
+                se suele ver en otros lenguajes. Para obtener el contenido de las variables simplemete tenemos que poner
+                $ y el nombre de la variable y en caso de los array $var[pos].
+            </p>
+            <code>
+                <span id="shcomando">echo</span> <span id="shcomillas">"<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">$variableArrayN[2]</span>"</span>
+            </code>
+            <code>
+                contenido de variable y además los números 6
+            </code>
+            <p>
+                Como podemos ver, es bastante sencillo el uso de las variables en bash, es importante saber que
+                <strong>los arrays empiezan en 0 y no en 1</strong> y también que si en vez de comillas dobles
+                <strong>usamos
+                    simples, no nos
+                    mostrará el contenido de la variable, si no el texto tal cuál.</strong>
+            </p>
+            <code>
+                <span id="shcomando">echo</span> <span id="shcomillas">'<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">$variableArrayN[2]</span>'</span>
+            </code>
+            <code>
+                $variabletexto y además los números $variablearrayn[2]
+            </code>
+            <p>
+                En el siguiente post veremos:
+            </p>
+            <ul>
+                <li>Sentencia if</li>
+                <li>Bucle for</li>
+                <li>Bucle for in</li>
+                <li>Bucle while</li>
+                <li>Bucle until</li>
+            </ul>
+            <a href="#arriba">
+                <p>VOLVER A LEER</p>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Copyright - 2020</p>
+        <ul>
+            <li><a href="https://twitter.com/miguelrp2001"><img src="/images/social/twitter.png"></a></li>
+            <li><a href="https://github.com/mijiko200"><img src="/images/social/github.png"></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

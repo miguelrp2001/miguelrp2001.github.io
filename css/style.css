@@ -152,7 +152,7 @@ article h3 {
     float: right;
     position: absolute;
     padding-top: .6em;
-    padding-left: 10em;
+    padding-left: 9em;
 }
 
 article p {
@@ -176,8 +176,7 @@ article i {
 
 article i:hover {
     filter: drop-shadow(1px 1px 1em black);
-    filter: invert(20%);
-    filter: blur(0.2px)
+    filter: blur(0.9px)
 }
 
 /* section */
@@ -220,16 +219,52 @@ section > p {
     text-align: justify;
 }
 
+#confondo{
+    background-color: #f2ff00;
+}
+
+#shcomentario{
+    color: rgb(44, 160, 44);
+}
+
+#shcomando{
+    color: rgb(237, 247, 149);
+}
+
+#shcomillas{
+    color: rgb(245, 66, 1);
+}
+
+#shvariable{
+    color: rgb(1, 245, 151);
+}
+
 section > code {
     display: block;
-    margin-left: 4em;
-    margin-right: 10em;
+    margin-left: 7em;
+    margin-right: 7em;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1em;
-    background-color: black;
+    background-color: #000000CE;
     color: white;
     border-radius: 5px;
+    text-transform: lowercase;
+}
+
+section > blockquote {
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-left: #000000 2px solid;
+    padding: 0.5em;
+    line-height: 0.95;
+    background-color: #00000035;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: justify;
+    font-style: italic;
 }
 
 section img{
@@ -244,8 +279,10 @@ section img{
 }
 
 section table {
-    margin: 1em;
-    margin-left: 40%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section form {
@@ -280,6 +317,16 @@ table, td,th {
     border-collapse: collapse;
     padding: 0.5em;
     
+}
+
+ tr:hover {
+    background-color: #0000005F;
+}
+
+section > ul {
+    padding-left: 4em;
+    padding-top: 1em;
+    list-style-image: url(/images/tick.png);
 }
 
 /* footer */
