@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.code - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="icon" href="../images/dotcode_fav.png" type="image/png" />
+</head>
+
+<body>
+    <div id="fondo_cabecera">
+        <header>
+            <a href="../index.html"><img src="../images/dotcode.png" /></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a>
+                        <ul>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">nodejs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="full" id="arriba">
+            <h2 class="no_imagen">Registro</h2>
+
+            <form id="datospersonales" class="primero">
+                <h4>Datos personales</h4>
+                <label for="fname">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" class="cuadronormal"
+                    pattern="^[A-Z,Á,É,Í,Ó,Ú,À,È,Ì,Ò,Ù,Ä,Ë,Ï,Ö,Ü,Â,Ê,Î,Ô,Û,a-z,á,é,í,ó,ú,à,è,ì,ò,ù,ä,ë,ï,ö,ü,â,ê,î,ô,û, ]{2,20}" />
+                <label for="lname">Apellidos: </label>
+                <input type="text" id="apellidos" name="apellidos" class="cuadronormal"
+                    pattern="^[A-Z,Á,É,Í,Ó,Ú,À,È,Ì,Ò,Ù,Ä,Ë,Ï,Ö,Ü,Â,Ê,Î,Ô,Û,a-z,á,é,í,ó,ú,à,è,ì,ò,ù,ä,ë,ï,ö,ü,â,ê,î,ô,û, ]{2,20}" />
+                <label for=" lname">Correo electrónico: </label>
+                <input type="email" id="correo" name="correo" class="cuadronormal" />
+                <label for=" lname">Contraseña: </label>
+                <input type="password" name="Contraseña" id="contraseña" class="cuadronormal"
+                    pattern="[a-zA-Z0-9]{8,16}" />
+                <h4>Datos bancarios</h4>
+                <label for="ftarjeta">Tarjeta: </label>
+                <input type="text" name="tarjeta" inputmode="numeric" id="tarjeta" class="cuadronormal"
+                    pattern="[0-9\s]{13,19}" maxlength="19" />
+                <label for="fcvc">CVV:</label>
+                <input type="text" name="cvv" id="cvv" class="cuadropq" pattern="[0-9]{3}" maxlength="3" />
+                <label for="fcad">Fecha de caducidad:</label>
+                <select name="mes" id="mes" class="cuadropq">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="año" id="año" class="cuadropq">
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                </select>
+                <h4>Datos de facturación</h4>
+                <label for="fdireccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" class="cuadronormal" />
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Copyright - 2020</p>
+        <ul>
+            <li><a href=" https://twitter.com/miguelrp2001"><img src="/images/social/twitter.png"></a></li>
+            <li><a href="https://github.com/mijiko200"><img src="/images/social/github.png"></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

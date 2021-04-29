@@ -180,6 +180,44 @@ article i:hover {
 }
 
 /* section */
+span.aviso {
+    display: inline;
+    background-color: red;
+    padding: .5em;
+    height: 100%;
+    width: auto;
+    max-width: unset;
+    margin-top: .7em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+}
+
+span.aviso h3 {
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+input.cerrar {
+    display: inline;
+    font-size: 1.17em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+input[type=checkbox]:checked~span.aviso {
+    display: none;
+}
+
+section.popup {
+    background-color: transparent;
+    background-image: none;
+}
+
+input[type=checkbox]:checked {
+    display: none;
+}
 
 section {
     background-color: white;
@@ -211,6 +249,10 @@ section h2.en_imagen {
     z-index: 5;
 
   }
+
+section.full {
+    height: auto;
+}
 
 section > p {
     padding-left: 2em;
@@ -285,10 +327,14 @@ section table {
     margin-right: auto;
 }
 
-section form {
+section form.primero {
     padding-top: 6em;
     padding: 2em;
-    height: 20em;
+    margin: 4em;
+}
+
+section form {
+    padding: 2em;
     margin: 4em;
 }
 
@@ -362,4 +408,77 @@ footer img:hover {
     filter: invert(20%);
     filter: blur(.2px);
 
+}
+
+.cuadronormal:valid{
+    border-color: #000000af;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 50%;
+    height: 2em;
+}
+
+.cuadronormal:focus {
+    outline: none;
+}
+
+.cuadronormal:invalid {
+    border-color: red;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 50%;
+    height: 2em;
+}
+
+.cuadropq:valid{
+    border-color: #000000af;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 5%;
+    height: 2em;
+}
+
+.cuadropq:focus {
+    outline: none;
+}
+
+.cuadropq:invalid {
+    border-color: red;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 5%;
+    height: 2em;
+}
+
+label {
+    display: block;
+    padding-top: 1em;
+}
+
+h4 {
+    display: block;
+    padding-top: 1em;
+    font-size: 20px;
+}
+
+#mensaje{
+    border-color: #000000af;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 50%;
+    height: 10em;
+}
+
+#enviar{
+    border-color: #000000af;
+    border-radius: 10px;
+    transition: border-color .2s ease-in-out;
+    width: 50%;
+    height: 3em;
+    display: block;
+}
+
+input:focus, input:hover{
+    border-color: #00ffea86;
+    transition: border-color .1s ease-in-out;
 }

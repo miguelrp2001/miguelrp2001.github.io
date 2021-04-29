@@ -31,7 +31,7 @@
         </header>
     </div>
     <main>
-        <section class="full">
+        <section class="full" id="arriba">
             <h2 class="no_imagen">Contacto</h2>
             <form>
                 <label for="fname">Nombre: </label><br>
@@ -40,11 +40,9 @@
                 <input type="text" id="apellidos" name="apellidos"><br>
                 <label for="lname">Correo electrónico: </label><br>
                 <input type="email" id="correo" name="correo"><br>
-                <label for="lname">Adjunto: </label><br>
-                <input type="file" id="archivo" name="archivo"><br><br>
-                <input type="submit" value="Enviar">
-
-
+                <label for="lname">Mensaje: </label><br>
+                <textarea name="mensaje" id="mensaje"></textarea><br>
+                <input type="submit" id="enviar" value="Enviar">
             </form>
         </section>
     </main>
