@@ -184,27 +184,30 @@ section.popup {
     width: 100%;
 }
 
-span.aviso {
+div.aviso {
     display: block;
     background-color: red;
     padding: .5em;
-    height: 100%;
+    padding-bottom: 1em;
+    height: 2em;
     width: 100%;
     max-width: unset;
     margin-top: .7em;
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 10px;
+    z-index: 0;
 }
 
-span.aviso h3 {
+div.aviso h3 {
     display: inline;
     width: 100%;
     height: 100%;
     padding-left: 1em;
 }
 
-span.aviso a {
+div.aviso a {
+    float: right;
     height: 100%;
     
 }
@@ -221,9 +224,10 @@ input[type=checkbox] + label{
     margin-left: 1.3em;
     margin-top: -.5em;
     padding-right: 1em;
+    z-index: 5;
 }
 
-input[type=checkbox]:checked~span.aviso {
+input[type=checkbox]:checked~div.aviso {
     display: none;
 }
 
@@ -300,6 +304,10 @@ section > p {
 
 #shvariable{
     color: rgb(1, 245, 151);
+}
+
+section.fullForm {
+    width: 30%;
 }
 
 section > code {
@@ -431,44 +439,141 @@ footer img:hover {
 
 }
 
+small.passwdhint {
+    display: none;
+    background-color: #58000038;
+    width: 30%;
+    float: right;
+    left: 35%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: .3em;
+    position: absolute;
+    top: 9.7%;
+    z-index: 7;
+    padding-top: 1em;
+    border-bottom: red 2px solid;
+}
+
+input#contraseña:invalid + small.passwdhint {
+    display: block;
+}
+
 .cuadronormal:valid{
-    border-color: #000000af;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 50%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #0000003f;
+    border-radius: 5px;
+    transition: border-color .1s ease-in-out;
+    width: 100%;
     height: 2em;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
 }
 
 .cuadronormal:focus {
     outline: none;
+    border-color: #000000af;
+    transition: border-color background-color .2s ease-in-out;
 }
 
 .cuadronormal:invalid {
+    border-top: none;
+    border-left: none;
+    border-right: none;
     border-color: red;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 50%;
+    background-color: #58000038;
+    transition: border-color background-color .2s ease-in-out;
+    border-radius: 5px;
+    width: 100%;
     height: 2em;
+    z-index: 5;
+    padding: .5em;
 }
 
-.cuadropq:valid{
-    border-color: #000000af;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 5%;
+.cuadropq:valid { 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #00000031;
+    border-radius: 5px;
+    width: 12%;
     height: 2em;
+    background-color: #00000011;
+    transition: border-color background-color .2s ease-in-out;
+    padding: .5em;
 }
+
 
 .cuadropq:focus {
     outline: none;
+    border-color: #000000af;
+    transition: border-color background-color .2s ease-in-out;
 }
 
 .cuadropq:invalid {
+    border-top: none;
+    border-left: none;
+    border-right: none;
     border-color: red;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 5%;
+    border-radius: 5px;
+    background-color: #58000038;
+    transition: border-color background-color .2s ease-in-out;
+    width: 12%;
     height: 2em;
+    padding: .5em;
+}
+
+.selectorForm {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #00000031;
+    border-radius: 5px;
+    width: 16%;
+    height: 2em;
+    background-color: #00000011;
+    transition: border-color background-color .2s ease-in-out;
+    padding: .2em;
+}
+
+.cuadromediano:valid{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #0000003f;
+    border-radius: 5px;
+    transition: border-color .1s ease-in-out;
+    width: 50%;
+    height: 2em;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
+}
+
+.cuadromediano:focus {
+    outline: none;
+    border-color: #000000af;
+    transition: border-color background-color .2s ease-in-out;
+}
+
+.cuadromediano:invalid {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: red;
+    background-color: #58000038;
+    transition: border-color background-color .2s ease-in-out;
+    border-radius: 5px;
+    width: 50%;
+    height: 2em;
+    z-index: 5;
+    padding: .5em;
 }
 
 label {
