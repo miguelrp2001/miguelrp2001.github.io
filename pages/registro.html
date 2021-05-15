@@ -62,21 +62,21 @@
                         maxlength="20" />
                     <label for=" correo">Correo electrónico: </label>
                     <input tabindex="3" type="email" id="correo" name="correo" class="cuadronormal" />
-                    <label for="Contraseña">Contraseña: </label>
-                    <input tabindex="4" type="password" name="Contraseña" id="contraseña" class="cuadronormal"
+                    <label for="passwd">Contraseña: </label>
+                    <input tabindex="4" type="password" name="passwd" id="contraseña" class="cuadronormal"
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}$" />
                     <small class="passwdhint">La contraseña debe contener entre 8 y 16 carácteres, con letras tanto
                         minúsculas
                         como mayúsculas y números.</small>
                     <h4>Datos bancarios</h4>
                     <label for="ftarjeta">Tarjeta: </label>
-                    <input tabindex="5" onkeyup="toUnicode(this,this.value)" type="text" name="ftarjeta"
+                    <input tabindex="5" onkeyup="toUnicode(this,this.value)" type="text" name="tarjeta0"
                         inputmode="numeric" id="tarjeta0" class="cuadropq" pattern="[0-9\s]{4}" maxlength="4" />
-                    <input tabindex="6" onkeyup="toUnicode(this,this.value)" type="text" name="ftarjeta"
+                    <input tabindex="6" onkeyup="toUnicode(this,this.value)" type="text" name="tarjeta1"
                         inputmode="numeric" id="tarjeta1" class="cuadropq" pattern="[0-9\s]{4}" maxlength="4" />
-                    <input tabindex="7" onkeyup="toUnicode(this,this.value)" type="text" name="ftarjeta"
+                    <input tabindex="7" onkeyup="toUnicode(this,this.value)" type="text" name="tarjeta2"
                         inputmode="numeric" id="tarjeta2" class="cuadropq" pattern="[0-9\s]{4}" maxlength="4" />
-                    <input tabindex="8" onkeyup="toUnicode(this,this.value)" type="text" name="ftarjeta"
+                    <input tabindex="8" onkeyup="toUnicode(this,this.value)" type="text" name="tarjeta3"
                         inputmode="numeric" id="tarjeta3" class="cuadropq" pattern="[0-9\s]{4}" maxlength="4" />
                     <label for="cvv">CVV:</label>
                     <input tabindex="9" onkeyup="toUnicode(this,this.value)" type="text" name="cvv" id="cvv"
