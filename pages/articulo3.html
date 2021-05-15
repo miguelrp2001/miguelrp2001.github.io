@@ -71,16 +71,19 @@
             <code>
                 variableTexto="Contenido de variable"<br><br>
                 variableNum=1231238172<br><br>
+                <span id="shcomando">declare</span> <span id="shparametro">-a</span> variableArray<br><br>
                 variableArray=("Array" "De" "Texto")<br><br>
+                <span id="shcomando">declare</span> <span id="shparametro">-a</span> variableArrayN<br><br>
                 variableArrayN=(1 4 6 3 2)<br><br>
+                <span id="shcomando">declare</span> <span id="shparametro">-a</span> variableArrayMezcla<br><br>
                 variableArrayMezcla=(1 3 5 "Podemos mezclar texto y números en arrays" 9 15 32)
             </code>
             <p>Como podemos apreciar, en este lenguaje podemos incluso mezclar tipos de datos en los array, algo que no
                 se suele ver en otros lenguajes. Para obtener el contenido de las variables simplemete tenemos que poner
-                $ y el nombre de la variable y en caso de los array $var[pos].
+                $ y el nombre de la variable y en caso de los array ${var[pos]}.
             </p>
             <code>
-                <span id="shcomando">echo</span> <span id="shcomillas">"<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">$variableArrayN[2]</span>"</span>
+                <span id="shcomando">echo</span> <span id="shcomillas">"<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">${variableArrayN[2]}</span>"</span>
             </code>
             <code>
                 contenido de variable y además los números 6
@@ -93,10 +96,10 @@
                     mostrará el contenido de la variable, si no el texto tal cuál.</strong>
             </p>
             <code>
-                <span id="shcomando">echo</span> <span id="shcomillas">'<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">$variableArrayN[2]</span>'</span>
+                <span id="shcomando">echo</span> <span id="shcomillas">'<span id="shvariable">$variableTexto</span> y además los números <span id="shvariable">${variableArrayN[2]}</span>'</span>
             </code>
             <code>
-                $variabletexto y además los números $variablearrayn[2]
+                $variabletexto y además los números ${variablearrayn[2]}
             </code>
             <p>
                 En el siguiente post veremos:
