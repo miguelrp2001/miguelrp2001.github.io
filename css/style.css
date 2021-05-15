@@ -2,7 +2,6 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    /*border: solid red 0px;*/
 }
 
 body {
@@ -10,6 +9,7 @@ body {
     background-image: url(/images/bg.png);
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    min-width: 418px;
 }
 
 /* Header y nav */
@@ -180,69 +180,6 @@ article i:hover {
 }
 
 /* section */
-section.popup {
-    width: 100%;
-}
-
-div.aviso {
-    display: block;
-    background-color: red;
-    padding: .5em;
-    padding-bottom: 1em;
-    height: 2em;
-    width: 100%;
-    max-width: unset;
-    margin-top: .7em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 10px;
-    z-index: 0;
-}
-
-div.aviso h3 {
-    display: inline;
-    width: 100%;
-    height: 100%;
-    padding-left: 1em;
-}
-
-div.aviso a {
-    float: right;
-    height: 100%;
-    
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox] + label{
-    color: rgba(0, 0, 0, 0.40);
-    position: absolute;
-    float: left;
-    font-size: 1.17em;
-    margin-left: 1.3em;
-    margin-top: -.5em;
-    padding-right: 1em;
-    z-index: 5;
-}
-
-input[type=checkbox]:checked~div.aviso {
-    display: none;
-}
-
-input[type=checkbox]:checked~label.cerrar{
-    display: none;
-}
-
-section.popup {
-    background-color: transparent;
-    background-image: none;
-}
-
-input[type=checkbox]:checked {
-    display: none;
-}
 
 section {
     background-color: white;
@@ -307,7 +244,11 @@ section > p {
 }
 
 section.fullForm {
-    width: 30%;
+    width: 30em;
+}
+
+section#centrado {
+    transform: translateY(100%);
 }
 
 section > code {
@@ -338,7 +279,7 @@ section > blockquote {
     font-style: italic;
 }
 
-section img{
+section img.articulo{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
@@ -357,15 +298,9 @@ section table {
 }
 
 section form.primero {
-    padding-top: 6em;
-    padding: 2em;
-    margin: 4em;
+    padding-top: 5em;
 }
 
-section form {
-    padding: 2em;
-    margin: 4em;
-}
 
 section a p {
     text-align: center;
@@ -441,23 +376,46 @@ footer img:hover {
 
 small.passwdhint {
     display: none;
-    background-color: #58000038;
-    width: 30%;
-    float: right;
-    left: 35%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 100%;
+    height: 3.5em;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     text-align: center;
-    padding: .3em;
-    position: absolute;
-    top: 9.7%;
+    padding: .4em;
+    padding-top: .6em;
+    position: relative;
+    top: -2px;
     z-index: 7;
-    padding-top: 1em;
-    border-bottom: red 2px solid;
+    color: #00000000;
+    border-top: #00000000 2px solid;
+    border-top: red 2px solid;
+    background-color: #58000038;
+    color: #000000;
 }
 
 input#contraseña:invalid + small.passwdhint {
     display: block;
+}
+
+label {
+    display: block;
+    padding-top: 1em;
+}
+
+h4 {
+    display: block;
+    padding-top: 1em;
+    font-size: 20px;
+}
+
+#contraseña:invalid {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+#contraseña {
+    margin-bottom: 3.5em;
 }
 
 .cuadronormal:valid{
@@ -476,9 +434,8 @@ input#contraseña:invalid + small.passwdhint {
 }
 
 .cuadronormal:focus {
-    outline: none;
     border-color: #000000af;
-    transition: border-color background-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
 }
 
 .cuadronormal:invalid {
@@ -501,18 +458,18 @@ input#contraseña:invalid + small.passwdhint {
     border-right: none;
     border-color: #00000031;
     border-radius: 5px;
-    width: 12%;
+    width: 5em;
     height: 2em;
     background-color: #00000011;
     transition: border-color background-color .2s ease-in-out;
     padding: .5em;
+    text-align: center;
 }
 
 
 .cuadropq:focus {
-    outline: none;
     border-color: #000000af;
-    transition: border-color background-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
 }
 
 .cuadropq:invalid {
@@ -523,9 +480,10 @@ input#contraseña:invalid + small.passwdhint {
     border-radius: 5px;
     background-color: #58000038;
     transition: border-color background-color .2s ease-in-out;
-    width: 12%;
+    width: 5em;
     height: 2em;
     padding: .5em;
+    text-align: center;
 }
 
 .selectorForm {
@@ -534,7 +492,7 @@ input#contraseña:invalid + small.passwdhint {
     border-right: none;
     border-color: #00000031;
     border-radius: 5px;
-    width: 16%;
+    width: 7em;
     height: 2em;
     background-color: #00000011;
     transition: border-color background-color .2s ease-in-out;
@@ -547,19 +505,17 @@ input#contraseña:invalid + small.passwdhint {
     border-right: none;
     border-color: #0000003f;
     border-radius: 5px;
-    transition: border-color .1s ease-in-out;
     width: 50%;
     height: 2em;
     background-color: #00000011;
-    transition: background-color .1s ease-in-out;
+    transition: background-color border-color .1s ease-in-out;
     z-index: 5;
     padding: .5em;
 }
 
 .cuadromediano:focus {
-    outline: none;
     border-color: #000000af;
-    transition: border-color background-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
 }
 
 .cuadromediano:invalid {
@@ -576,35 +532,135 @@ input#contraseña:invalid + small.passwdhint {
     padding: .5em;
 }
 
-label {
-    display: block;
-    padding-top: 1em;
-}
-
-h4 {
-    display: block;
-    padding-top: 1em;
-    font-size: 20px;
-}
-
-#mensaje{
-    border-color: #000000af;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 50%;
-    height: 10em;
-}
-
-#enviar{
-    border-color: #000000af;
-    border-radius: 10px;
-    transition: border-color .2s ease-in-out;
-    width: 50%;
-    height: 3em;
-    display: block;
-}
-
-input:focus, input:hover{
-    border-color: #00ffea86;
+.cuadrogrande:valid{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #0000003f;
+    border-radius: 5px;
     transition: border-color .1s ease-in-out;
+    width: 100%;
+    height: 30em;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
+    resize: none;
 }
+
+.cuadrogrande:focus {
+    border-color: #000000af;
+    transition: border-color .2s ease-in-out;
+}
+
+.cuadrogrande:invalid {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: red;
+    background-color: #58000038;
+    transition: border-color background-color .2s ease-in-out;
+    border-radius: 5px;
+    width: 100%;
+    height: 2em;
+    z-index: 5;
+    padding: .5em;
+}
+
+#boton:hover {
+    margin: auto;
+    border-color: #000000af;
+    transition: border-color .2s ease-in-out;
+}
+
+.botonbajo{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: border-color .1s ease-in-out;
+    width: 100%;
+    height: 2em;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
+    text-align: center;
+    border: none;
+}
+
+.botonbajo:hover, .botonbajoder:hover, .botonbajoizq:hover{
+    background-color: #00000044;
+    transition: background-color .2s ease-in-out;
+}
+
+.botonbajoder{
+    border-bottom-right-radius: 5px;
+    transition: border-color .1s ease-in-out;
+    width: 50%;
+    height: 2em;
+    float: right;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
+    text-align: center;
+    border: none;
+}
+
+.botonbajoizq{
+    border-bottom-left-radius: 5px;
+    transition: border-color .1s ease-in-out;
+    float: left;
+    width: 50%;
+    height: 2em;
+    background-color: #00000011;
+    transition: background-color .1s ease-in-out;
+    z-index: 5;
+    padding: .5em;
+    text-align: center;
+    border: none;
+}
+
+.margenform {
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+label.cbform {
+    display: inline;
+    position: relative;
+    margin-left: 2em;
+    top: -1.3em;
+}
+input.cbform {
+    display: block;
+    margin-top: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: #00000011;
+    border: 2px solid #00000011;
+    border-radius: 5px;
+}
+
+input.cbform:checked, input.cbform:checked:hover{
+    border: 2px solid #00000044;
+    background-color: #00000044;
+}
+
+
+
+input.cbform:hover{
+    border: 2px solid #00000024;
+    background-color: #00000024;
+}
+
+/* Para quitar las lineas y cosas que ponen los navegadores
+   webkit: Para Safari que le gusta poner estilos a todo.
+   outline: Para el resto, que ponen una linea al rededor de las cosas seleccionadas.
+*/
+
+input, select, textarea {
+    -webkit-appearance: none;
+    -webkit-border-redius: none;
+    outline: none;
+    }

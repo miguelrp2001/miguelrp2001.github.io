@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=.759" />
     <title>.code - Contacto</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -25,25 +25,36 @@
                             <li><a href="#">nodejs</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li>I</li>
+                    <li><a href="iniciosesion.html">Mi Cuenta</a></li>
+                    <li><a href="registro.html">Unirse</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     <main>
-        <section class="full" id="arriba">
+        <section class="fullForm" id="arriba">
             <h2 class="no_imagen">Contacto</h2>
-            <form>
-                <label for="fname">Nombre: </label><br>
-                <input type="text" id="nombre" name="nombre"><br>
-                <label for="lname">Apellidos: </label><br>
-                <input type="text" id="apellidos" name="apellidos"><br>
-                <label for="lname">Correo electrónico: </label><br>
-                <input type="email" id="correo" name="correo"><br>
-                <label for="lname">Mensaje: </label><br>
-                <textarea name="mensaje" id="mensaje"></textarea><br>
-                <input type="submit" id="enviar" value="Enviar">
+
+            <form id="contacto" class="primero">
+                <div class="margenform">
+                    <label for="nombre">Nombre: </label>
+                    <input tabindex="1" type="text" id="nombre" name="nombre" class="cuadronormal"
+                        pattern="^[A-Z,Á,É,Í,Ó,Ú,À,È,Ì,Ò,Ù,Ä,Ë,Ï,Ö,Ü,Â,Ê,Î,Ô,Û,a-z,á,é,í,ó,ú,à,è,ì,ò,ù,ä,ë,ï,ö,ü,â,ê,î,ô,û, ]{2,20}"
+                        maxlength="20" />
+                    <label for="apellidos">Apellidos: </label>
+                    <input tabindex="2" type="text" id="apellidos" name="apellidos" class="cuadronormal"
+                        pattern="^[A-Z,Á,É,Í,Ó,Ú,À,È,Ì,Ò,Ù,Ä,Ë,Ï,Ö,Ü,Â,Ê,Î,Ô,Û,a-z,á,é,í,ó,ú,à,è,ì,ò,ù,ä,ë,ï,ö,ü,â,ê,î,ô,û, ]{2,20}"
+                        maxlength="20" />
+                    <label for=" correo">Correo electrónico: </label>
+                    <input tabindex="3" type="email" id="correo" name="correo" class="cuadronormal" />
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea tabindex="4" name="mensaje" class="cuadrogrande">Hola, </textarea>
+                </div>
+                <input type="submit" class="material-icons botonbajo" id="boton" value="send" />
             </form>
+
         </section>
     </main>
     <footer>
